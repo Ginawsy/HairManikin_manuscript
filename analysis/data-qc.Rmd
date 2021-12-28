@@ -12,7 +12,8 @@ editor_options:
 
 ## Introduction
 
-```{r}
+```{r setup, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+
 library(tidyverse)
 library(lubridate)
 library(janitor)
@@ -21,6 +22,7 @@ F = rprojroot::is_rstudio_project$make_fix_file()
 
 knitr::opts_chunk$set(echo = TRUE, include = TRUE, eval = TRUE, warning = FALSE, message = FALSE, fig.retina = 2, fig.width = 8, fig.height = 6, out.width = "100%")
 ```
+
 ## Introduction
 
 In brief, the experiments were carried out in a climate controlled chamber at the University of Loughborough (UK) using a full-body thermal manikin with 20 independently controllable zones. Human hair wigs ranging from straight to tightly curled were used to test the effect of hair on heat gain/loss in a number of conditions.
@@ -58,6 +60,7 @@ raw_manikin <- read_csv(F("data/raw_manikin_output/round_1/HighCurv_RadOff_wind0
 head(raw_manikin)
 
 ```
+
 The data can be cleaned using the following pipeline.
 
 ```{r}
